@@ -391,3 +391,38 @@ nav ul li a:hover {
     width: 100%;
   }
 }
+
+/* Estilos do Footer */
+footer {
+  background-color: #E8BD61; /* Cor de fundo do footer */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px; /* Espaçamento acima do footer */
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.whatsapp-link {
+  margin-top: 10px; /* Espaçamento entre o texto e o link do WhatsApp */
+}
+
+.whatsapp-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.whatsapp-link a:hover {
+  text-decoration: underline;
+}
+
+.whatsapp-link i {
+  font-size: 1.5em; /* Tamanho do ícone do WhatsApp */
+}
