@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #E8BD61;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #E8BD61; /* Cor da página */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 50px; /* Ajuste conforme necessário */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white; 
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos da Seção História */
+/* Estilos da Seção História */
+#historia {
+  padding: 100px 20px 20px;
+  position: relative;
+  z-index: 5; /* Garante que fique acima das imagens */
+}
+
+#historia h1 {
+  font-size: 5em;
+  color: white;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-top: -30px;
+}
+
+.historia-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.historia-imagem {
+  width: 50%;
+  height: 600px; /* Altura fixa para o carrossel */
+  position: relative; /* Necessário para as bolinhas de paginação */
+}
+
+/* Configuração do carrossel */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Mantém o carrossel abaixo do título */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Cor de fundo igual à da página */
+}
+
+.swiper-slide img {
+  width: 100%; /* Garante que a imagem ocupe toda a largura */
+  height: 100%; /* Garante que a imagem ocupe toda a altura */
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+  border-radius: 10px;
+}
+
+/* Bolinhas de paginação */
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px; /* Ajuste a distância da borda inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Garante que as bolinhas fiquem acima da imagem */
+}
+
+.swiper-pagination-bullet {
+  background-color: #E62E2D;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E62E2D;
+  opacity: 1;
+}
+
+.historia-content {
+  width: 45%;
+}
+
+.historia-content h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #E62E2D;
+}
+
+.historia-content p {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #E62E2D;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+}
+
+.icones {
+  display: flex;
+  gap: 15px;
+}
+
+.icones a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #E62E2D;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.icones a:hover {
+  background-color: #c82333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .historia-container {
+    flex-direction: column;
+  }
+
+  .historia-imagem,
+  .historia-content {
+    width: 100%;
+  }
+
+  .historia-imagem {
+    height: 300px; /* Altura menor para dispositivos móveis */
+  }
+}
+/* Galeria de fotos */
+.galeria {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px; /* Reduzi o padding para subir a galeria */
+}
+
+.galeria img {
+  width: 23%;
+  border-radius: 10px;
+}
+
+/* Seção Fundador */
+#fundador {
+  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+}
+
+#fundador h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #E62E2D; /* Vermelho */
+}
+
+.fundador-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.fundador-imagem {
+  width: 50%;
+  border: 5px solid #E62E2D; /* Linha vermelha quadrada */
+  padding: 5px; /* Espaçamento interno */
+}
+
+.fundador-imagem img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Seção Projetos */
+#projetos {
+  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+}
+
+#projetos h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #E62E2D; /* Vermelho */
+}
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.projeto {
+  background-color: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Seção Contato */
+#contato {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+}
+
+.mapa {
+  width: 50%;
+}
+
+.contato-info {
+  width: 40%;
+}
+
+.contato-info h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #E62E2D; /* Vermelho */
+}
+
+.contato-info p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #historia h1 {
+    font-size: 3.5em; /* Reduzir o tamanho em dispositivos móveis */
+    text-align: center; /* Centralizado em dispositivos móveis */
+    margin-left: 0; /* Remover margem à esquerda */
+    margin-top: 0; /* Resetar margem superior */
+  }
+
+  .historia-container {
+    flex-direction: column;
+  }
+
+  .historia-imagem, .historia-content {
+    width: 100%;
+    margin-top: 0; /* Resetar margem superior */
+  }
+
+  .galeria {
+    flex-direction: column;
+  }
+
+  .galeria img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .fundador-container {
+    flex-direction: column;
+  }
+
+  .fundador-imagem {
+    width: 100%;
+  }
+
+  #contato {
+    flex-direction: column;
+  }
+
+  .mapa, .contato-info {
+    width: 100%;
+  }
+}
+
+/* Estilos da Seção Sucessão */
+#sucessao {
+  padding: 30px 20px;
+}
+
+#sucessao h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #E62E2D; /* Vermelho */
+}
+
+.sucessao-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sucessao-imagem {
+  width: 50%;
+}
+
+.sucessao-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sucessao-content {
+  width: 45%;
+}
+
+.sucessao-content h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #E62E2D; /* Vermelho */
+}
+
+.sucessao-content p {
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Responsividade para a Seção Sucessão */
+@media (max-width: 768px) {
+  .sucessao-container {
+    flex-direction: column;
+  }
+
+  .sucessao-imagem, .sucessao-content {
+    width: 100%;
+  }
+}
