@@ -11,13 +11,13 @@ body {
   line-height: 1.6;
 }
 
-/* Header fixo */
+/* Estilos gerais da navbar */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #e8bd61; /* Cor da página */
+  background-color: #e8bd61;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,16 +26,13 @@ header {
 }
 
 header .logo img {
-  height: 50px; /* Ajuste conforme necessário */
+  height: 50px;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -48,12 +45,69 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Estilos da Seção História */
+/* Estilos para o ícone do menu hambúrguer */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Estilos para telas pequenas (menu hambúrguer) */
+@media (max-width: 768px) {
+  header {
+    justify-content: space-between;
+    padding: 5px 10px;
+    height: 50px; /* Altura fixa para o header */
+  }
+
+  .menu-icon {
+    display: block;
+    order: 2; /* Coloca o ícone no final (lado direito) */
+    font-size: 20px; /* Reduz o tamanho do ícone */
+  }
+
+  header .logo {
+    order: 1; /* Coloca a logo no início (lado esquerdo) */
+  }
+
+  header .logo img {
+    height: 40px; /* Reduz o tamanho da logo */
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 50px; /* Ajusta a posição para não cobrir o conteúdo */
+    left: 0;
+    width: 100%;
+    background-color: #e8bd61;
+    padding: 10px 0;
+    max-height: 70vh; /* Limita a altura do menu */
+    overflow-y: auto; /* Adiciona scroll se o menu for muito grande */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.9em;
+    padding: 8px 0; /* Reduz o espaçamento dos links */
+  }
+
+  nav.active {
+    display: block;
+  }
+}
+
 /* Estilos da Seção História */
 #historia {
   padding: 100px 20px 20px;
   position: relative;
-  z-index: 5; /* Garante que fique acima das imagens */
+  z-index: 5;
 }
 
 #historia h1 {
@@ -74,39 +128,36 @@ nav ul li a:hover {
 
 .historia-imagem {
   width: 50%;
-  height: 600px; /* Altura fixa para o carrossel */
-  position: relative; /* Necessário para as bolinhas de paginação */
+  height: 600px;
+  position: relative;
 }
 
-/* Configuração do carrossel */
 .swiper-container {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1; /* Mantém o carrossel abaixo do título */
+  z-index: 1;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000; /* Cor de fundo igual à da página */
 }
 
 .swiper-slide img {
-  width: 100%; /* Garante que a imagem ocupe toda a largura */
-  height: 100%; /* Garante que a imagem ocupe toda a altura */
-  object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Bolinhas de paginação */
 .swiper-pagination {
   position: absolute;
-  bottom: 20px; /* Ajuste a distância da borda inferior */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10; /* Garante que as bolinhas fiquem acima da imagem */
+  z-index: 10;
 }
 
 .swiper-pagination-bullet {
@@ -181,26 +232,11 @@ nav ul li a:hover {
   background-color: #c82333;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .historia-container {
-    flex-direction: column;
-  }
-
-  .historia-imagem,
-  .historia-content {
-    width: 100%;
-  }
-
-  .historia-imagem {
-    height: 300px; /* Altura menor para dispositivos móveis */
-  }
-}
 /* Galeria de fotos */
 .galeria {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px; /* Reduzi o padding para subir a galeria */
+  padding: 10px 20px;
 }
 
 .galeria img {
@@ -210,13 +246,13 @@ nav ul li a:hover {
 
 /* Seção Fundador */
 #fundador {
-  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+  padding: 30px 20px;
 }
 
 #fundador h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #e62e2d; /* Vermelho */
+  color: #e62e2d;
 }
 
 .fundador-container {
@@ -227,8 +263,8 @@ nav ul li a:hover {
 
 .fundador-imagem {
   width: 50%;
-  border: 5px solid #e62e2d; /* Linha vermelha quadrada */
-  padding: 5px; /* Espaçamento interno */
+  border: 5px solid #e62e2d;
+  padding: 5px;
 }
 
 .fundador-imagem img {
@@ -239,13 +275,13 @@ nav ul li a:hover {
 
 /* Seção Projetos */
 #projetos {
-  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+  padding: 30px 20px;
 }
 
 #projetos h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #e62e2d; /* Vermelho */
+  color: #e62e2d;
 }
 
 .projetos-grid {
@@ -266,7 +302,7 @@ nav ul li a:hover {
 #contato {
   display: flex;
   justify-content: space-between;
-  padding: 30px 20px; /* Reduzi o padding para subir a seção */
+  padding: 30px 20px;
 }
 
 .mapa {
@@ -280,7 +316,7 @@ nav ul li a:hover {
 .contato-info h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #e62e2d; /* Vermelho */
+  color: #e62e2d;
 }
 
 .contato-info p {
@@ -289,18 +325,70 @@ nav ul li a:hover {
   color: white;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Estilos da Seção Sucessão */
+#sucessao {
+  padding: 30px 20px;
+}
 
+#sucessao h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #e62e2d;
+}
+
+.sucessao-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sucessao-imagem {
+  width: 50%;
+}
+
+.sucessao-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sucessao-content {
+  width: 45%;
+}
+
+.sucessao-content h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #e62e2d;
+}
+
+.sucessao-content p {
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Estilos do Footer */
+footer {
+  background-color: #e8bd61;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
   #historia h1 {
-    font-size: 3.5em; /* Reduzir o tamanho em dispositivos móveis */
-    text-align: center; /* Centralizado em dispositivos móveis */
-    margin-left: 0; /* Remover margem à esquerda */
-    margin-top: 0; /* Resetar margem superior */
+    font-size: 3.5em;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0;
   }
 
   .historia-container {
@@ -310,7 +398,11 @@ nav ul li a:hover {
   .historia-imagem,
   .historia-content {
     width: 100%;
-    margin-top: 0; /* Resetar margem superior */
+    margin-top: 0;
+  }
+
+  .historia-imagem {
+    height: 300px;
   }
 
   .galeria {
@@ -338,53 +430,7 @@ nav ul li a:hover {
   .contato-info {
     width: 100%;
   }
-}
 
-/* Estilos da Seção Sucessão */
-#sucessao {
-  padding: 30px 20px;
-}
-
-#sucessao h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #e62e2d; /* Vermelho */
-}
-
-.sucessao-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.sucessao-imagem {
-  width: 50%;
-}
-
-.sucessao-imagem img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.sucessao-content {
-  width: 45%;
-}
-
-.sucessao-content h3 {
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: #e62e2d; /* Vermelho */
-}
-
-.sucessao-content p {
-  font-size: 1.2em;
-  color: white;
-}
-
-/* Responsividade para a Seção Sucessão */
-@media (max-width: 768px) {
   .sucessao-container {
     flex-direction: column;
   }
@@ -393,39 +439,4 @@ nav ul li a:hover {
   .sucessao-content {
     width: 100%;
   }
-}
-
-/* Estilos do Footer */
-footer {
-  background-color: #e8bd61; /* Cor de fundo do footer */
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px; /* Espaçamento acima do footer */
-}
-
-footer p {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.whatsapp-link {
-  margin-top: 10px; /* Espaçamento entre o texto e o link do WhatsApp */
-}
-
-.whatsapp-link a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px; /* Espaçamento entre o ícone e o texto */
-}
-
-.whatsapp-link a:hover {
-  text-decoration: underline;
-}
-
-.whatsapp-link i {
-  font-size: 1.5em; /* Tamanho do ícone do WhatsApp */
 }
