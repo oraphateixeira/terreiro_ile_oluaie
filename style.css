@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #E8BD61;
+  background-color: #e8bd61;
   color: white;
   line-height: 1.6;
 }
@@ -17,7 +17,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #E8BD61; /* Cor da página */
+  background-color: #e8bd61; /* Cor da página */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white; 
+  color: white;
   text-decoration: none;
   font-size: 1.1em;
 }
@@ -110,7 +110,7 @@ nav ul li a:hover {
 }
 
 .swiper-pagination-bullet {
-  background-color: #E62E2D;
+  background-color: #e62e2d;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -123,7 +123,7 @@ nav ul li a:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #E62E2D;
+  background-color: #e62e2d;
   opacity: 1;
 }
 
@@ -134,7 +134,7 @@ nav ul li a:hover {
 .historia-content h2 {
   font-size: 3em;
   margin-bottom: 15px;
-  color: #E62E2D;
+  color: #e62e2d;
 }
 
 .historia-content p {
@@ -151,7 +151,7 @@ nav ul li a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #E62E2D;
+  background-color: #e62e2d;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -170,7 +170,7 @@ nav ul li a:hover {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #E62E2D;
+  background-color: #e62e2d;
   border-radius: 50%;
   color: white;
   text-decoration: none;
@@ -216,7 +216,7 @@ nav ul li a:hover {
 #fundador h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #E62E2D; /* Vermelho */
+  color: #e62e2d; /* Vermelho */
 }
 
 .fundador-container {
@@ -227,7 +227,7 @@ nav ul li a:hover {
 
 .fundador-imagem {
   width: 50%;
-  border: 5px solid #E62E2D; /* Linha vermelha quadrada */
+  border: 5px solid #e62e2d; /* Linha vermelha quadrada */
   padding: 5px; /* Espaçamento interno */
 }
 
@@ -245,7 +245,7 @@ nav ul li a:hover {
 #projetos h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #E62E2D; /* Vermelho */
+  color: #e62e2d; /* Vermelho */
 }
 
 .projetos-grid {
@@ -280,7 +280,7 @@ nav ul li a:hover {
 .contato-info h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #E62E2D; /* Vermelho */
+  color: #e62e2d; /* Vermelho */
 }
 
 .contato-info p {
@@ -307,7 +307,8 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
-  .historia-imagem, .historia-content {
+  .historia-imagem,
+  .historia-content {
     width: 100%;
     margin-top: 0; /* Resetar margem superior */
   }
@@ -333,7 +334,8 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
-  .mapa, .contato-info {
+  .mapa,
+  .contato-info {
     width: 100%;
   }
 }
@@ -346,7 +348,7 @@ nav ul li a:hover {
 #sucessao h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  color: #E62E2D; /* Vermelho */
+  color: #e62e2d; /* Vermelho */
 }
 
 .sucessao-container {
@@ -373,7 +375,7 @@ nav ul li a:hover {
 .sucessao-content h3 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #E62E2D; /* Vermelho */
+  color: #e62e2d; /* Vermelho */
 }
 
 .sucessao-content p {
@@ -387,14 +389,15 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
-  .sucessao-imagem, .sucessao-content {
+  .sucessao-imagem,
+  .sucessao-content {
     width: 100%;
   }
 }
 
 /* Estilos do Footer */
 footer {
-  background-color: #E8BD61; /* Cor de fundo do footer */
+  background-color: #e8bd61; /* Cor de fundo do footer */
   color: white;
   text-align: center;
   padding: 20px 0;
